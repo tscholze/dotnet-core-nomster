@@ -28,17 +28,20 @@ In general, Nomster is designed to help collegues to manage their daily "what ar
 ## Screenshots
 
 **iOS, Android**
+
 ![iOS App](https://github.com/tscholze/.net-core-nomster/blob/master/docs/ios.png "iOS App")
 ![Droid App](https://github.com/tscholze/.net-core-nomster/blob/master/docs/droid.png "Droid App")
 
 **macOS**
+
 ![macOS App](https://github.com/tscholze/.net-core-nomster/blob/master/docs/macOS.png "macOS App")
 
 **Web**
+
 ![Website](https://github.com/tscholze/.net-core-nomster/blob/master/docs/web.png "Website")
 
 **Console**
-**Web**
+
 ![Console](https://github.com/tscholze/.net-core-nomster/blob/master/docs/console.png "Console program")
 
 ### Prerequisites
