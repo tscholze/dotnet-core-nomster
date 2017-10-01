@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib" x:Class="Nomster.Core.Views.MainPage">
+    <ContentPage.Content>
+        <Grid Style="{StaticResource pageGridStyle}">
+            <Grid.RowDefinitions>
+                <!-- Header -->
+                <RowDefinition Height="Auto" />
+                <!-- List -->
+                <RowDefinition Height="*" />
+                <!-- Button -->
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <!-- Header -->
+            <Grid Grid.Row="0" Style="{StaticResource headerGridStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <!-- Header text -->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Title}" Style="{StaticResource headerLabelStyle}" HorizontalOptions="StartAndExpand" />
+                    <Label Text="Doe, John" Style="{StaticResource headerLabelStyle}" HorizontalOptions="End" />
+                </StackLayout>
+                <!-- Logo -->
+                <Image Grid.Row="1" Source="nomster">
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="system:Double">
+                            <On Platform="iOS" Value="100" />
+                            <On Platform="Android" Value="100" />
+                            <On Platform="macOS" Value="0" />
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                </Image>
+            </Grid>
+            <!-- Listview -->
+            <ListView Grid.Row="1" ItemsSource="{Binding Lunches}" Style="{StaticResource listViewStyle}" x:Name="root">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Style="{StaticResource itemStackLayoutStyle}">
+                                <StackLayout Style="{StaticResource itemTextStackLayoutStyle}">
+                                    <Label Text="{Binding NumberOfAttendees, StringFormat='{0:00}'}" Style="{StaticResource itemAttendeeLabelStyle}" />
+                                    <StackLayout Style="{StaticResource itemRightTextStackLayoutStyle}">
+                                        <Label Text="{Binding Title}" />
+                                        <Label Text="{Binding OfficeLeftDate, StringFormat='{0:HH:mm}'}" FontSize="12" />
+                                    </StackLayout>
+                                    <Button Text="Join" Style="{StaticResource greenButtonStyle}" Command="{Binding Path=BindingContext.JoinLunchCommand, Source={x:Reference root}}" CommandParameter="{Binding Id}" />
+                                </StackLayout>
+                                <BoxView Style="{StaticResource seperatorBoxViewStyle}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- Footer Button -->
+            <Button Grid.Row="2" Text="Add suggestion" Style="{StaticResource greenBorderedButtonStyle}" Clicked="Handle_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

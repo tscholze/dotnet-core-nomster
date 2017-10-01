@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Nomster.Core.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Layout -->
+            <Style x:Key="pageGridStyle" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="#F5F5F5" />
+            </Style>
+            <Style x:Key="modalPageGridStyle" TargetType="Grid">
+                <Setter Property="Padding" Value="20, 45, 20, 0" />
+                <Setter Property="BackgroundColor" Value="#F5F5F5" />
+            </Style>
+            <Style x:Key="headerGridStyle" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="#669933" />
+                <Setter Property="Padding" Value="20" />
+            </Style>
+            <Style x:Key="modalPageHeaderStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+            <Style x:Key="itemStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Margin" Value="0, 10, 0 ,10" />
+            </Style>
+            <Style x:Key="itemRightTextStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Padding" Value="15, 0, 15, 0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <!-- Lists -->
+            <Style x:Key="listViewStyle" TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="SeparatorVisibility" Value="None" />
+                <Setter Property="RowHeight" Value="70" />
+            </Style>
+            <Style x:Key="itemTextStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Margin" Value="20, 0" />
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+            <!-- Labels -->
+            <Style x:Key="headerLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="modalPageHeaderStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="itemAttendeeLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="42" />
+                <Setter Property="TextColor" Value="#666666" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <!-- Buttons -->
+            <Style x:Key="greenButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="#669933" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="greenBorderedButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderColor" Value="#95BD83" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BackgroundColor" Value="#669933" />
+                <Setter Property="Margin" Value="20" />
+                <Setter Property="HeightRequest" Value="44" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+            </Style>
+            <!-- Other elements -->
+            <Style x:Key="greenEntryStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="#669933" />
+                <Setter Property="HeightRequest" Value="44" />
+            </Style>
+            <Style x:Key="greenTimePickerStyle" TargetType="TimePicker">
+                <Setter Property="TextColor" Value="#669933" />
+                <Setter Property="HeightRequest" Value="44" />
+            </Style>
+            <Style x:Key="seperatorBoxViewStyle" TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="Silver" />
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

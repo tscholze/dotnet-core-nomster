@@ -1,0 +1,66 @@
+html, body {
+    font-family: SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #BDD7B1;
+    padding-top: 50px;
+    color: #111111;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: 1px solid #BDD7B1;
+}
+
+li {
+    margin: 0 0 3px 0;
+    list-style: none;
+}
+
+.content-wrapper {
+    padding: 0px 15px 15px 15px;
+    border: 4px solid #95BD83;
+    border-radius: 4px;
+    background-color: #EDF6F7;
+}
+
+.attendees {
+    font-size: 36px;
+    color: #95BD83;
+    width: 30px;
+}
+
+.title {
+
+}
+
+.time {
+    color: darkgray;
+}
+
+.left-side p {
+    text-align: center;
+    font-size: 0.75rem;
+    color: darkgray;
+}
+
+.footer {
+    padding-top: 5px;
+    font-size: 0.5rem;
+    text-align: center;
+    color: green;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.text-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    padding-left: 10px;
+}

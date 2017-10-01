@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+
+<div>
+	<div class="text-container">
+		<span class="ms-fontSize-su">Nomster</span>
+		<span class="ms-font-m ms-hiddenLgDown ms-fontColor-neutralTertiary subtitle">Manage your NomNom like a 🐹</span>
+	</div>
+
+	<div class="ms-Grid-col ms-sm4 ms-md4 ms-lg4 left-side">
+        <img src="~/images/nomster.png" />
+		<p>Work together, Nom together!</p>
+	</div>
+
+	<div class="ms-Grid-col ms-sm1 ms-md1 ms-lg1">&nbsp;</div>
+
+	<div class="ms-Grid-col ms-sm6 ms-md6 ms-lg6 right-side">
+    
+	@foreach (var l in Model.viewModel.Lunches) {
+        <li>
+			<table>
+				<tr><td rowspan="3" valign="middle"><span class="attendees">@l.NumberOfAttendees</span></td></tr>
+				<tr><td></td><td><span class="title">@l.Title</span></td></tr>
+				<tr><td></td><td><span class="time">@(l.OfficeLeftDate.ToString("HH:mm"))</span></td></tr>
+			</table>
+			<hr />
+		</li>
+	}
+	</div>
+</div>
